@@ -370,7 +370,7 @@
 <p><code>hexo new &quot;文章题目&quot;</code></p>
 <p>命令执行完后，就会发现在 Hexo\source_posts 目录中多了一个文件博文名.md，这就是我们刚才新建的博文。</p>
 <p>此外，我们也可以直接进入 Hexo\source_posts 目录中，右键新建一个文本文档，将名字改为博文名.md,这样也新建了一篇博文。</p>
-<p>##新建页面<br>上面新建的博文是显示在单个文章界面，这里新建的页面是作为单个页面显示的，比如下图的分类、标签、归档和关于我，你点击后都是显示为单个页面。</p>
+<h2 id="新建页面"><a href="#新建页面" class="headerlink" title="新建页面"></a>新建页面</h2><p>上面新建的博文是显示在单个文章界面，这里新建的页面是作为单个页面显示的，比如下图的分类、标签、归档和关于我，你点击后都是显示为单个页面。</p>
 <p><img src="http://7xnuu7.com1.z0.glb.clouddn.com/blogwrite1.png" alt="img"></p>
 <p>你只需要记住新建博文是用上面的方法，新建页面是用这里的方法就行了，这里也采用命令新建页面：</p>
 <p><code>hexo new page &quot;页面名称&quot;</code></p>
@@ -402,24 +402,23 @@
 <p>刷新你的个人博客，就可以看到新鲜出炉的博文了，赶紧邀请小伙伴们来欣赏吧。</p>
 <hr>
 <p>话外音:其实到这里，你已经学会了怎么搭建并发表博客，所以最初的目标已经实现，可以happy地写博客去啦。后面是我自己的选修课，如果你也愿意像我一样折腾，就继续往下看吧O(∩_∩)O。</p>
-<p>#安装NexT主题</p>
-<p>##选择主题<br>我们刚才使用Hexo生成的博客使用的是Hexo的默认主题：Landscape。怎么说呢，这个主题猛地一看还行，仔细一看还不如猛地一看，所以我决定另寻归宿。</p>
+<h1 id="安装NexT主题"><a href="#安装NexT主题" class="headerlink" title="安装NexT主题"></a>安装NexT主题</h1><h2 id="选择主题"><a href="#选择主题" class="headerlink" title="选择主题"></a>选择主题</h2><p>我们刚才使用Hexo生成的博客使用的是Hexo的默认主题：Landscape。怎么说呢，这个主题猛地一看还行，仔细一看还不如猛地一看，所以我决定另寻归宿。</p>
 <p>然后，我来到了这里：Themes·Hexo,瞬间有了一种村姑进城的感觉。我是一个一个地看，看得我眼花缭乱也没一个抉择，最后综合网友的评价，选择了这个主题：NexT。</p>
 <ul>
 <li>简洁大方，比较符合我的品位；</li>
 <li>作者iissnan很勤快，持续更新主题，作者博客的样式就是他正在开发而未上线的NexT主题新样式</li>
 </ul>
 <p>当然，每个人的品位都不一样，你也可以选择其它的主题，当然也欢迎你选择NexT主题，这样就能继续一起愉快地折腾啦。</p>
-<h2 id="安装NexT主题"><a href="#安装NexT主题" class="headerlink" title="安装NexT主题"></a>安装NexT主题</h2><p>Hexo 有两份主要的配置文件（_config.yml），一份位于站点根目录下，另一份位于主题目录下。为了描述方便，在以下说明中，将前者称为<strong>站点配置文件</strong>，后者称为<strong>主题配置文件</strong>。</p>
-<p>##下载 NexT 主题<br>使用 Git Shell 进入 Hexo 文件夹，输入以下两条命令：</p>
+<h2 id="安装NexT主题-1"><a href="#安装NexT主题-1" class="headerlink" title="安装NexT主题"></a>安装NexT主题</h2><p>Hexo 有两份主要的配置文件（_config.yml），一份位于站点根目录下，另一份位于主题目录下。为了描述方便，在以下说明中，将前者称为<strong>站点配置文件</strong>，后者称为<strong>主题配置文件</strong>。</p>
+<h2 id="下载-NexT-主题"><a href="#下载-NexT-主题" class="headerlink" title="下载 NexT 主题"></a>下载 NexT 主题</h2><p>使用 Git Shell 进入 Hexo 文件夹，输入以下两条命令：</p>
 <ol>
 <li>cd Hexo          </li>
 <li>git clone <a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="external">https://github.com/iissnan/hexo-theme-next</a> themes/next</li>
 </ol>
 <h2 id="启用NexT主题"><a href="#启用NexT主题" class="headerlink" title="启用NexT主题"></a>启用NexT主题</h2><p>下载完成后，打开 站点配置文件，找到 theme 字段，并将其值更改为 next。</p>
-<p>##验证主题是否启用<br>执行上面发博文的命令，刷新你的个人博客，就能看到你设置的主题是否启用。</p>
-<p>#设置NexT主题和第三方服务<br>安装完NexT之后，还是发现不够漂亮对不对，所以下面我们来慢慢地润色你的个人博客。</p>
-<p>##选择样式<br>NexT默认的样式其实也比较丑，幸好作者提供了一款十分漂亮的样式:Mist。启用 Mist 很简单，仅需在 主题配置文件 中将 #scheme: Mist 前面的 # 注释去掉即可。</p>
+<h2 id="验证主题是否启用"><a href="#验证主题是否启用" class="headerlink" title="验证主题是否启用"></a>验证主题是否启用</h2><p>执行上面发博文的命令，刷新你的个人博客，就能看到你设置的主题是否启用。</p>
+<h1 id="设置NexT主题和第三方服务"><a href="#设置NexT主题和第三方服务" class="headerlink" title="设置NexT主题和第三方服务"></a>设置NexT主题和第三方服务</h1><p>安装完NexT之后，还是发现不够漂亮对不对，所以下面我们来慢慢地润色你的个人博客。</p>
+<h2 id="选择样式"><a href="#选择样式" class="headerlink" title="选择样式"></a>选择样式</h2><p>NexT默认的样式其实也比较丑，幸好作者提供了一款十分漂亮的样式:Mist。启用 Mist 很简单，仅需在 主题配置文件 中将 #scheme: Mist 前面的 # 注释去掉即可。</p>
 <h2 id="菜单设置"><a href="#菜单设置" class="headerlink" title="菜单设置"></a>菜单设置</h2><p>菜单配置在 主题配置文件 的 menu，下面是菜单配置示例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">menu:</div><div class="line">  #home: /</div><div class="line">  archives: /archives</div><div class="line">  about: /about</div><div class="line">  categories: /categories</div><div class="line">  tags: /tags</div><div class="line">  #commonweal: /404.html</div></pre></td></tr></table></figure></p>
 <p>其它的很多在NexT官方文档里面已经讲的很清楚了，我就不在这里重复造轮子了，</p>
 
