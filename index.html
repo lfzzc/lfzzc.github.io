@@ -171,7 +171,7 @@
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
             
-            Home
+            Startseite
           </a>
         </li>
       
@@ -179,7 +179,7 @@
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             
-            Archives
+            Archiv
           </a>
         </li>
       
@@ -251,7 +251,7 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Posted on</span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
             <time itemprop="dateCreated" datetime="2016-10-21T11:28:30+08:00" content="2016-10-21">
               2016-10-21
             </time>
@@ -285,15 +285,15 @@
             <blockquote>
 <p>一切皆有可能</p>
 </blockquote>
-<p>#前言<br>“工欲善其事，必先利其器”，在搭建个人博客的过程中，我深刻体会到这句话的含义。虽然早就决定了要搭建个人博客，但是我并没有草草动手，而是提前做了大量的调研工作，包括采用哪种博客系统、选择哪种主题、怎么购买并绑定个性域名等等。事实证明，正因为前期的充分准备，搭建过程才能按部就班地进行。下面先介绍为何选择GitHub Pages和Hexo来搭建博客，然后介绍搭建博客的详细过程。这篇文章可能长的让人想哭，但如果你坚持看完了，肯定会有收获的。此外，本教程不仅面向计算机专业的同学，任何想搭建个人独立博客的同学，都可以来看看。</p>
-<p>##GitHub<br><a href="https://github.com/" target="_blank" rel="external">GitHub</a>，是一个代码托管网站和社交编程网站。这里聚集了世界上各路技术牛叉的大牛，和最优秀的代码库。把你的博客托管在这里，还有什么不放心的呢O(∩_∩)O。</p>
-<p>##GitHub Pages<br><a href="https://pages.github.com/" target="_blank" rel="external">GitHub Pages</a>，是用来托管GitHub上静态网页的免费站点，那GitHub Pages具体有哪些功能呢：</p>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>“工欲善其事，必先利其器”，在搭建个人博客的过程中，我深刻体会到这句话的含义。虽然早就决定了要搭建个人博客，但是我并没有草草动手，而是提前做了大量的调研工作，包括采用哪种博客系统、选择哪种主题、怎么购买并绑定个性域名等等。事实证明，正因为前期的充分准备，搭建过程才能按部就班地进行。下面先介绍为何选择GitHub Pages和Hexo来搭建博客，然后介绍搭建博客的详细过程。这篇文章可能长的让人想哭，但如果你坚持看完了，肯定会有收获的。此外，本教程不仅面向计算机专业的同学，任何想搭建个人独立博客的同学，都可以来看看。</p>
+<h2 id="GitHub"><a href="#GitHub" class="headerlink" title="GitHub"></a>GitHub</h2><p><a href="https://github.com/" target="_blank" rel="external">GitHub</a>，是一个代码托管网站和社交编程网站。这里聚集了世界上各路技术牛叉的大牛，和最优秀的代码库。把你的博客托管在这里，还有什么不放心的呢O(∩_∩)O。</p>
+<h2 id="GitHub-Pages"><a href="#GitHub-Pages" class="headerlink" title="GitHub Pages"></a>GitHub Pages</h2><p><a href="https://pages.github.com/" target="_blank" rel="external">GitHub Pages</a>，是用来托管GitHub上静态网页的免费站点，那GitHub Pages具体有哪些功能呢：</p>
 <ul>
 <li>有300M免费空间，资料自己管理，保存可靠；</li>
 <li>享受 GitHub 的便利，上面有很多大牛，眼界会开阔很多；</li>
 <li>可以使用很多现成的博客框架，搭建过程简单快速。）</li>
 </ul>
-<p>##Hexo<br><a href="https://github.com/hexojs/hexo" target="_blank" rel="external">Hexo</a> 是一个简单、快速、强大的静态博客框架,出自台湾大学生tommy351之手。我也看过使用Jekyll、Octopress搭建个人博客的过程，确实要繁琐许多。相比之下Hexo更轻便更快捷，下面是Hexo官网强调Hexo的四大特点：</p>
+<h2 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h2><p><a href="https://github.com/hexojs/hexo" target="_blank" rel="external">Hexo</a> 是一个简单、快速、强大的静态博客框架,出自台湾大学生tommy351之手。我也看过使用Jekyll、Octopress搭建个人博客的过程，确实要繁琐许多。相比之下Hexo更轻便更快捷，下面是Hexo官网强调Hexo的四大特点：</p>
 <ul>
 <li>极速生成静态页面</li>
 <li>支持Markdown</li>
@@ -301,18 +301,11 @@
 <li>丰富的插件支持</li>
 </ul>
 <hr>
-<p>#使用GitHub Pages建立博客站点</p>
-<p>##注册GitHub</p>
-<p>##在GitHub上建立仓库</p>
-<p>##搭建环境</p>
-<p>###安装:</p>
-<ul>
+<h1 id="使用GitHub-Pages建立博客站点"><a href="#使用GitHub-Pages建立博客站点" class="headerlink" title="使用GitHub Pages建立博客站点"></a>使用GitHub Pages建立博客站点</h1><h2 id="注册GitHub"><a href="#注册GitHub" class="headerlink" title="注册GitHub"></a>注册GitHub</h2><h2 id="在GitHub上建立仓库"><a href="#在GitHub上建立仓库" class="headerlink" title="在GitHub上建立仓库"></a>在GitHub上建立仓库</h2><h2 id="搭建环境"><a href="#搭建环境" class="headerlink" title="搭建环境"></a>搭建环境</h2><h3 id="安装"><a href="#安装" class="headerlink" title="安装:"></a>安装:</h3><ul>
 <li>Node.js</li>
 <li>GitHub for Windows</li>
 </ul>
-<p>##配置SSH Key</p>
-<p>##使用Hexo创建博客框架</p>
-<p>###Hexo安装<br>打开 Git Shell，启动后依次输入以下命令：</p>
+<h2 id="配置SSH-Key"><a href="#配置SSH-Key" class="headerlink" title="配置SSH Key"></a>配置SSH Key</h2><h2 id="使用Hexo创建博客框架"><a href="#使用Hexo创建博客框架" class="headerlink" title="使用Hexo创建博客框架"></a>使用Hexo创建博客框架</h2><h3 id="Hexo安装"><a href="#Hexo安装" class="headerlink" title="Hexo安装"></a>Hexo安装</h3><p>打开 Git Shell，启动后依次输入以下命令：</p>
 <ol>
 <li>cd /</li>
 <li>npm install hexo-cli -g</li>
@@ -320,7 +313,7 @@
 <p>如图：</p>
 <p><img src="http://7xnuu7.com1.z0.glb.clouddn.com/bloghexo1.jpg" alt="img"></p>
 <p><strong>提示：cd / 作用是返回根目录，Git Shell 默认装在 C盘，启动时默认路径为 C:\Users\xxx(用户名)\Documents\GitHub，输入 cd / 命令后就返回到了 C盘根目录下，需不需要使用 cd / 看个人习惯（下同）</strong></p>
-<p>###Hexo部署<br>Hexo的部署可采用如下方法，输入命令： hexo init [文件名]。</p>
+<h3 id="Hexo部署"><a href="#Hexo部署" class="headerlink" title="Hexo部署"></a>Hexo部署</h3><p>Hexo的部署可采用如下方法，输入命令： hexo init [文件名]。</p>
 <p>打开Git Shell，启动后依次输入以下命令：</p>
 <ol>
 <li>cd /</li>
@@ -347,12 +340,11 @@
 <p><img src="http://7xnuu7.com1.z0.glb.clouddn.com/bloghexo5.png" alt="img"></p>
 <p>恭喜，到目前为止个人博客的雏形已经有了。</p>
 <p>在 Git Shell 中按 Ctrl + C 并输入 y 可以停止该服务。</p>
-<p>##将本地文件部署到 GitHub</p>
-<p>###修改 Hexo 中的 _config.yml 文件<br>在 Hexo 文件夹下找到 _config.yml 文件,如下图所示：</p>
+<h2 id="将本地文件部署到-GitHub"><a href="#将本地文件部署到-GitHub" class="headerlink" title="将本地文件部署到 GitHub"></a>将本地文件部署到 GitHub</h2><h3 id="修改-Hexo-中的-config-yml-文件"><a href="#修改-Hexo-中的-config-yml-文件" class="headerlink" title="修改 Hexo 中的 _config.yml 文件"></a>修改 Hexo 中的 _config.yml 文件</h3><p>在 Hexo 文件夹下找到 _config.yml 文件,如下图所示：</p>
 <p><img src="http://7xnuu7.com1.z0.glb.clouddn.com/bloghexo6.png" alt="img"></p>
 <p>找到其中的 deploy 标签，改成下图所示形式，并保存。注意：冒号后面要加上一个空格，否则会报错。</p>
 <p><img src="http://7xnuu7.com1.z0.glb.clouddn.com/bloghexo7.png" alt="img"></p>
-<p>###将其 deploy 到仓库中<br>打开 Git Shell 进入创建的文件夹，依次输入以下命令：</p>
+<h3 id="将其-deploy-到仓库中"><a href="#将其-deploy-到仓库中" class="headerlink" title="将其 deploy 到仓库中"></a>将其 deploy 到仓库中</h3><p>打开 Git Shell 进入创建的文件夹，依次输入以下命令：</p>
 <ol>
 <li>hexo clean</li>
 <li>hexo denerate</li>
@@ -373,9 +365,8 @@
 <p>恭喜，到这一步，个人博客就已经部署到 GitHub 上了，你可以到你的GitHub仓库查看是否已经更新。此时,通过 your_user_name.github.io（即你那个仓库的名称，形如：”你的 GitHub 用户名”.github.io）,就可以看到你的个人博客了。</p>
 <hr>
 <p><strong>提示：上述搭建步骤大量参考了yangruihan的博客，如果你对搭建过程还有疑问，可以查看他的原创博文：Windows下一步步搭建自己的独立博客——使用 GitHub Pages + Hexo 基础教程（一）。</strong></p>
-<p>#发表博文</p>
-<p>辛苦了这么久，终于回到我们搭建博客最初的目标–写作，现在来看看怎么写博文并发表吧(^__^)。</p>
-<p>##新建博文<br>我们可以使用命令新建一篇博文,使用 Git Shell 进入 Hexo 文件夹，输入以下命令：</p>
+<h1 id="发表博文"><a href="#发表博文" class="headerlink" title="发表博文"></a>发表博文</h1><p>辛苦了这么久，终于回到我们搭建博客最初的目标–写作，现在来看看怎么写博文并发表吧(^__^)。</p>
+<h2 id="新建博文"><a href="#新建博文" class="headerlink" title="新建博文"></a>新建博文</h2><p>我们可以使用命令新建一篇博文,使用 Git Shell 进入 Hexo 文件夹，输入以下命令：</p>
 <p><code>hexo new &quot;文章题目&quot;</code></p>
 <p>命令执行完后，就会发现在 Hexo\source_posts 目录中多了一个文件博文名.md，这就是我们刚才新建的博文。</p>
 <p>此外，我们也可以直接进入 Hexo\source_posts 目录中，右键新建一个文本文档，将名字改为博文名.md,这样也新建了一篇博文。</p>
@@ -384,7 +375,7 @@
 <p>你只需要记住新建博文是用上面的方法，新建页面是用这里的方法就行了，这里也采用命令新建页面：</p>
 <p><code>hexo new page &quot;页面名称&quot;</code></p>
 <p>命令执行完后，就会发现在在 Hexo\source 目录中多了一个文件夹，里面还有一个index.md,这就代表我们新建了一个页面。</p>
-<p>##写博文<br>用文本编辑器打开上面新建的博文,，如下图所示：</p>
+<h2 id="写博文"><a href="#写博文" class="headerlink" title="写博文"></a>写博文</h2><p>用文本编辑器打开上面新建的博文,，如下图所示：</p>
 <p><img src="http://7xnuu7.com1.z0.glb.clouddn.com/blogwrite2.png" alt="img"></p>
 <p>三个”-“后面就是博文的正文内容，接下来就是正儿八经地撰写博文了。</p>
 <p>因为我们的博文都是用Markdown语言写的，所以首先，你需要一个好用的Markdown编辑器。其实好用的Markdown编辑器一大堆，这里就给大家推荐两个，如果你用的不习惯也可以换其它的。</p>
@@ -393,7 +384,7 @@
 <li>在线编辑器：<a href="http://mahua.jser.me/" target="_blank" rel="external">MaHua</a>,也是比较小众的一款Markdown编辑器，但效果确实很棒，我的这篇博文就是用MaHua写的。</li>
 </ul>
 <p>现在你可以打开新建的博文了，然而还不造怎么下手对吧。其实很简单，除了特殊格式，其它的你就当做在word里面写文章就行了，具体请看这里的Markdown教程：<a href="http://www.jianshu.com/p/1e402922ee32/#" target="_blank" rel="external">Markdown——入门指南</a>。<br>新建的页面略有不同，没有tags和categories标签。</p>
-<p>##发博文<br>呼啦啦，博文写好了，你得发表出去别人才看得到呀。依然在 Git Shell 中进入 Hexo 文件夹，执行下面几条命令，将博客部署到 GitHub 上：</p>
+<h2 id="发博文"><a href="#发博文" class="headerlink" title="发博文"></a>发博文</h2><p>呼啦啦，博文写好了，你得发表出去别人才看得到呀。依然在 Git Shell 中进入 Hexo 文件夹，执行下面几条命令，将博客部署到 GitHub 上：</p>
 <ol>
 <li>hexo clean</li>
 <li>hexo generate</li>
@@ -419,17 +410,17 @@
 <li>作者iissnan很勤快，持续更新主题，作者博客的样式就是他正在开发而未上线的NexT主题新样式</li>
 </ul>
 <p>当然，每个人的品位都不一样，你也可以选择其它的主题，当然也欢迎你选择NexT主题，这样就能继续一起愉快地折腾啦。</p>
-<p>##安装NexT主题<br>Hexo 有两份主要的配置文件（_config.yml），一份位于站点根目录下，另一份位于主题目录下。为了描述方便，在以下说明中，将前者称为<strong>站点配置文件</strong>，后者称为<strong>主题配置文件</strong>。</p>
+<h2 id="安装NexT主题"><a href="#安装NexT主题" class="headerlink" title="安装NexT主题"></a>安装NexT主题</h2><p>Hexo 有两份主要的配置文件（_config.yml），一份位于站点根目录下，另一份位于主题目录下。为了描述方便，在以下说明中，将前者称为<strong>站点配置文件</strong>，后者称为<strong>主题配置文件</strong>。</p>
 <p>##下载 NexT 主题<br>使用 Git Shell 进入 Hexo 文件夹，输入以下两条命令：</p>
 <ol>
 <li>cd Hexo          </li>
 <li>git clone <a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="external">https://github.com/iissnan/hexo-theme-next</a> themes/next</li>
 </ol>
-<p>##启用NexT主题<br>下载完成后，打开 站点配置文件，找到 theme 字段，并将其值更改为 next。</p>
+<h2 id="启用NexT主题"><a href="#启用NexT主题" class="headerlink" title="启用NexT主题"></a>启用NexT主题</h2><p>下载完成后，打开 站点配置文件，找到 theme 字段，并将其值更改为 next。</p>
 <p>##验证主题是否启用<br>执行上面发博文的命令，刷新你的个人博客，就能看到你设置的主题是否启用。</p>
 <p>#设置NexT主题和第三方服务<br>安装完NexT之后，还是发现不够漂亮对不对，所以下面我们来慢慢地润色你的个人博客。</p>
 <p>##选择样式<br>NexT默认的样式其实也比较丑，幸好作者提供了一款十分漂亮的样式:Mist。启用 Mist 很简单，仅需在 主题配置文件 中将 #scheme: Mist 前面的 # 注释去掉即可。</p>
-<p>##菜单设置<br>菜单配置在 主题配置文件 的 menu，下面是菜单配置示例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">menu:</div><div class="line">  #home: /</div><div class="line">  archives: /archives</div><div class="line">  about: /about</div><div class="line">  categories: /categories</div><div class="line">  tags: /tags</div><div class="line">  #commonweal: /404.html</div></pre></td></tr></table></figure></p>
+<h2 id="菜单设置"><a href="#菜单设置" class="headerlink" title="菜单设置"></a>菜单设置</h2><p>菜单配置在 主题配置文件 的 menu，下面是菜单配置示例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">menu:</div><div class="line">  #home: /</div><div class="line">  archives: /archives</div><div class="line">  about: /about</div><div class="line">  categories: /categories</div><div class="line">  tags: /tags</div><div class="line">  #commonweal: /404.html</div></pre></td></tr></table></figure></p>
 <p>其它的很多在NexT官方文档里面已经讲的很清楚了，我就不在这里重复造轮子了，</p>
 
           
@@ -501,7 +492,7 @@
           <div class="site-state-item site-state-posts">
             <a href="/archives">
               <span class="site-state-item-count">1</span>
-              <span class="site-state-item-name">posts</span>
+              <span class="site-state-item-name">Artikel</span>
             </a>
           </div>
 
@@ -548,7 +539,7 @@
 </div>
 
 <div class="powered-by">
-  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
+  Erstellt mit  <a class="theme-link" href="https://hexo.io">Hexo</a>
 </div>
 
 <div class="theme-info">
