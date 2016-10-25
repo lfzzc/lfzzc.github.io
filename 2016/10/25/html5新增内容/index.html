@@ -1,0 +1,629 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.2" />
+
+
+
+
+
+
+<meta name="description" content="##更语义化的标签&amp;lt;header&amp;gt; &amp;lt;nav&amp;gt; &amp;lt;section&amp;gt; &amp;lt;footer&amp;gt;在这里需要处理以下兼容性，方法是插入一个第三方的脚本：123&amp;lt;!--[if lt IE 9]&amp;gt;&amp;lt;script src=&amp;quot;http://html5shim.googlecode.com/svn/trunk/html5.js&amp;quot;&amp;gt;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="html5新增内容（一）">
+<meta property="og:url" content="http://yoursite.com/2016/10/25/html5新增内容/index.html">
+<meta property="og:site_name" content="zhangzc">
+<meta property="og:description" content="##更语义化的标签&amp;lt;header&amp;gt; &amp;lt;nav&amp;gt; &amp;lt;section&amp;gt; &amp;lt;footer&amp;gt;在这里需要处理以下兼容性，方法是插入一个第三方的脚本：123&amp;lt;!--[if lt IE 9]&amp;gt;&amp;lt;script src=&amp;quot;http://html5shim.googlecode.com/svn/trunk/html5.js&amp;quot;&amp;gt;">
+<meta property="og:updated_time" content="2016-10-25T05:40:45.803Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="html5新增内容（一）">
+<meta name="twitter:description" content="##更语义化的标签&amp;lt;header&amp;gt; &amp;lt;nav&amp;gt; &amp;lt;section&amp;gt; &amp;lt;footer&amp;gt;在这里需要处理以下兼容性，方法是插入一个第三方的脚本：123&amp;lt;!--[if lt IE 9]&amp;gt;&amp;lt;script src=&amp;quot;http://html5shim.googlecode.com/svn/trunk/html5.js&amp;quot;&amp;gt;">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2016/10/25/html5新增内容/"/>
+
+
+  <title> html5新增内容（一） | zhangzc </title>
+</head>
+
+<body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">zhangzc</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            公益404
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                html5新增内容（一）
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-10-25T11:00:01+08:00" content="2016-10-25">
+              2016-10-25
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/10/25/html5新增内容/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/25/html5新增内容/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>##更语义化的标签<br><code>&lt;header&gt; &lt;nav&gt; &lt;section&gt; &lt;footer&gt;</code><br>在这里需要处理以下兼容性，方法是插入一个第三方的脚本：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;!--[if lt IE 9]&gt;</div><div class="line">&lt;script src=&quot;http://html5shim.googlecode.com/svn/trunk/html5.js&quot;&gt;&lt;/script&gt;</div><div class="line">&lt;![endif]--&gt;</div></pre></td></tr></table></figure></p>
+<p>##应用程序功能标签<br><code>&lt;datalist&gt; &lt;progress&gt;</code><br><strong>例1</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;input type=&quot;text&quot; list=&quot;mylist&quot;/&gt;</div><div class="line">&lt;datalist id=&quot;mylist&quot;&gt;</div><div class="line">  &lt;option value=&quot;张三&quot;&gt;&lt;/option&gt;</div><div class="line">  &lt;option value=&quot;李四&quot;&gt;&lt;/option&gt;</div><div class="line">&lt;/datalist&gt;</div></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;progress value=&quot;20&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;</div></pre></td></tr></table></figure>
+<p>##-data-属性<br><strong>例1</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;p id=&quot;item&quot; data-id=&quot;3&quot; data-age=&quot;25&quot; data-gender=&quot;true&quot;&gt;</div><div class="line">    王二</div><div class="line">&lt;/p&gt;</div><div class="line">&lt;script&gt;</div><div class="line">    var item=document.getElementById(&apos;item&apos;);</div><div class="line">        console.log(item.dataset);</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure></p>
+<p>##智能表单</p>
+<p>###新的表单类型<br><strong>例1</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line">&lt;form action=&quot;#&quot;&gt;</div><div class="line">    &lt;label&gt;text:</div><div class="line">      &lt;input type=&quot;text&quot; required&gt;</div><div class="line">    &lt;/label&gt;</div><div class="line">    &lt;br&gt;</div><div class="line">    &lt;label&gt;email:</div><div class="line">      &lt;input type=&quot;email&quot; value=&quot;hello@world.com&quot; pattern=&quot;^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+((\.[a-zA-Z0-9-_]&#123;2,3&#125;)&#123;1,2&#125;)$&quot;&gt;</div><div class="line">    &lt;/label&gt;</div><div class="line">    &lt;br&gt;</div><div class="line">    &lt;label&gt;date:</div><div class="line">      &lt;input type=&quot;date&quot; min=&quot;2014-10-14&quot; max=&quot;2020-10-14&quot; value=&quot;2016-08-14&quot;&gt;</div><div class="line">    &lt;/label&gt;</div><div class="line">    &lt;br&gt;</div><div class="line">    &lt;label&gt;range:</div><div class="line">      &lt;input type=&quot;range&quot; min=&quot;0&quot; max=&quot;10&quot; value=&quot;5&quot; step=&quot;2&quot;&gt;</div><div class="line">    &lt;/label&gt;</div><div class="line">    &lt;br&gt;</div><div class="line">    &lt;label&gt;search:</div><div class="line">      &lt;input type=&quot;search&quot; results=&quot;10&quot; placeholder=&quot;关键词&quot;&gt;</div><div class="line">    &lt;/label&gt;</div><div class="line">    &lt;br&gt;</div><div class="line">    &lt;label&gt;tel:</div><div class="line">      &lt;input type=&quot;tel&quot; placeholder=&quot;(555) 555-555&quot; pattern=&quot;^\(?\d&#123;3&#125;\)?[-\s]\d&#123;3&#125;[-\s]\d&#123;4&#125;.*?$&quot;&gt;</div><div class="line">    &lt;/label&gt;</div><div class="line">    &lt;br&gt;</div><div class="line">    &lt;label&gt;color:</div><div class="line">      &lt;input type=&quot;color&quot;&gt;</div><div class="line">    &lt;/label&gt;</div><div class="line">    &lt;br&gt;</div><div class="line">    &lt;label&gt;number:</div><div class="line">      &lt;input type=&quot;number&quot; step=&quot;1&quot; min=&quot;-5&quot; max=&quot;10&quot; value=&quot;0&quot;&gt;</div><div class="line">    &lt;/label&gt;</div><div class="line">    &lt;br&gt;</div><div class="line">    &lt;input type=&quot;submit&quot; value=&quot;提交&quot;&gt;</div><div class="line">  &lt;/form&gt;</div></pre></td></tr></table></figure></p>
+<p>智能表单的应用更多的是在移动端，在pc端，一方面是兼容性不好，另一方面是样子很丑陋。</p>
+<p>###智能输入类型匹配<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">&lt;label for=&quot;txt_text&quot;&gt;text：</div><div class="line">    &lt;input type=&quot;text&quot; name=&quot;txt_text&quot; id=&quot;txt_text&quot;&gt;</div><div class="line">  &lt;/label&gt;</div><div class="line">  &lt;br&gt;</div><div class="line">  &lt;label for=&quot;txt_number&quot;&gt;number：</div><div class="line">    &lt;input type=&quot;number&quot; name=&quot;txt_number&quot; id=&quot;txt_number&quot;&gt;</div><div class="line">  &lt;/label&gt;</div><div class="line">  &lt;br&gt;</div><div class="line">  &lt;label for=&quot;txt_email&quot;&gt;email：</div><div class="line">    &lt;input type=&quot;email&quot; name=&quot;txt_email&quot; id=&quot;txt_email&quot;&gt;</div><div class="line">  &lt;/label&gt;</div><div class="line">  &lt;br&gt;</div><div class="line">  &lt;label for=&quot;txt_tel&quot;&gt;tel：</div><div class="line">    &lt;input type=&quot;tel&quot; name=&quot;txt_tel&quot; id=&quot;txt_tel&quot;&gt;</div><div class="line">  &lt;/label&gt;</div><div class="line">  &lt;br&gt;</div><div class="line">  &lt;label for=&quot;txt_url&quot;&gt;url：</div><div class="line">    &lt;input type=&quot;url&quot; name=&quot;txt_url&quot; id=&quot;txt_url&quot;&gt;</div><div class="line">  &lt;/label&gt;</div></pre></td></tr></table></figure></p>
+<p>类似于这样的智能输入类型匹配，同样在移动端才会有很好的匹配。</p>
+<p>##audio video<br>使用方法：<br><code>&lt;audio src=&quot;music.mp3&quot; controls&gt;&lt;/audio&gt;</code><br><code>audio</code>还有几个方法，例如：<code>audio.play()</code>,<code>audio.pause()</code>。这两个是播放和暂停的意思。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;video controls poster=&apos;toy.png&apos; preload=&apos;true&apos;&gt;</div><div class="line">		&lt;source src=&apos;fun.mp4&apos; type=&apos;video/ogg&apos;&gt;</div><div class="line">		&lt;source src=&apos;fun.mp4&apos; type=&apos;video/mp4&apos;&gt;</div><div class="line">&lt;/video&gt;</div></pre></td></tr></table></figure></p>
+<p><code>poster</code>属性的意思是视频未播放的时候所要展示的图片，<code>preload</code>意思未是否预加载，另外还有<code>loop</code>意思是否循环播放,<code>autoplay</code>意思是否自动播放。<code>&lt;source&gt;</code>标签的作用是标识<code>&lt;video&gt;</code>所支持的视频格式。</p>
+<p>##svg<br>什么是svg呢？<br>svg的意思是可缩放矢量图，那么我们为什么要使用svg呢，首先，svg是基于XML的。其次，它的优势是：体积小，质量高，效果好，而且可控程度高。<br><strong>svg的使用</strong></p>
+<ul>
+<li><code>&lt;iframe src=&quot;demo.svg&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;</code></li>
+<li><code>&lt;object data=&quot;demo.svg&quot; type=&quot;image/svg+xml&quot;&gt;&lt;/object&gt;</code></li>
+<li><code>&lt;embed src=&quot;demo.svg&quot; type=&quot;image/svg+xml&quot;&gt;</code></li>
+</ul>
+<p>推荐大家使用第一种，第三种所有浏览器都支持，但是没有任何一个标准定义这个标签。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/10/24/邮箱验证/" rel="next" title="categories">
+                <i class="fa fa-chevron-left"></i> categories
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/10/25/html5新增内容/"
+           data-title="html5新增内容（一）" data-url="http://yoursite.com/2016/10/25/html5新增内容/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="zhangzc" />
+          <p class="site-author-name" itemprop="name">zhangzc</p>
+          <p class="site-description motion-element" itemprop="description">人生没有战败，只有战死！</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">zhangzc</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"lfzhangzc"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    <script src="/vendors/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+
+</body>
+</html>
