@@ -259,6 +259,155 @@
             
               
                 
+                <a class="post-title-link" href="/2016/11/04/Angular笔记01/" itemprop="url">
+                  Angular笔记01
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-11-04T00:21:20+08:00" content="2016-11-04">
+              2016-11-04
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/11/04/Angular笔记01/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/11/04/Angular笔记01/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Angular"><a href="#Angular" class="headerlink" title="Angular"></a>Angular</h1><h2 id="Angular简介"><a href="#Angular简介" class="headerlink" title="Angular简介"></a>Angular简介</h2><h3 id="什么是Angular"><a href="#什么是Angular" class="headerlink" title="什么是Angular"></a>什么是Angular</h3><ul>
+<li>Angular是一款高级前端框架，使用Angular可以轻松的SPA（单一页面应用程序）应用程序</li>
+<li><p>单一页面应用程序:</p>
+<ul>
+<li>只有一个页面</li>
+<li>内容全部由AJAX方式呈现</li>
+</ul>
+</li>
+<li><p>核心： <strong>通过指令拓展HTML，通过表达式将数据绑定到HTML</strong></p>
+</li>
+</ul>
+<h3 id="为什么要使用Angular"><a href="#为什么要使用Angular" class="headerlink" title="为什么要使用Angular"></a>为什么要使用Angular</h3><ul>
+<li>Angular使用更少的代码，实现更多的功能</li>
+<li>使框架走向模式化，架构化</li>
+</ul>
+<h3 id="Angular核心特性"><a href="#Angular核心特性" class="headerlink" title="Angular核心特性"></a>Angular核心特性</h3><ul>
+<li>MVC</li>
+<li>模块化</li>
+<li>自动化双向数据绑定</li>
+<li>指令系统</li>
+</ul>
+<h3 id="Angular基础概念"><a href="#Angular基础概念" class="headerlink" title="Angular基础概念"></a>Angular基础概念</h3><ul>
+<li><p>MVC（Model View Controller）<br>MVC是一种思想，它将应用程序分为三个部分：</p>
+<ul>
+<li>Model：数据模型,用于存储数据的</li>
+<li>View：视图，用于展现数据的，可以理解为我们的html</li>
+<li>Controller：控制器，初始化模型用的，可以理解为我们的javascript</li>
+</ul>
+</li>
+<li><p>Module<br>模块是应用程序的最小单元，我们可以通过拼合组成我们整个的应用程序。<br>我们可以通过angular.module(‘myModule’,[])来创建一个模块，返回的是模块对象</p>
+</li>
+<li><p>Controller<br>控制器位于某个模块下，因此在创建一个控制器之前必须创建一个模块，我们可以如下创建一个控制器：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var myModule=angular.module(&apos;myModule&apos;,[]);</div><div class="line">    myModule.controller(&apos;myController&apos;,function ($scope) &#123;</div><div class="line">        console.log($scope);</div><div class="line">    &#125;);</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>如上例子，由个问题：当我们对该js压缩混淆之后，参数<code>$scope</code>就会被替换为其它名称,就会导致我们的功能出现错误，所以，创建一个控制器的标准方法是通过第二个参数传递一个数组的方式（数组最后一个为原本的控制器）如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var myModule=angular.module(&apos;myModule&apos;,[]);</div><div class="line">    myModule.controller(&apos;myController&apos;,[&apos;$scope&apos;, function ($scope) &#123;</div><div class="line">        console.log($scope);</div><div class="line">    &#125;]);</div></pre></td></tr></table></figure></p>
+<p>控制器的三种主要职责：</p>
+<pre><code>+ 为应用中的模型设置初始状态
++ 通过`$scope`对象将数据模型和函数行为暴露给视图
++ 监视模型的变化，做出相应的动作
+</code></pre><p><strong>html代码</strong>（我理解为视图）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">&lt;table border=&quot;1&quot; ng-app=&quot;myModule&quot; ng-controller=&quot;myController&quot;&gt;</div><div class="line">    &lt;tr&gt;</div><div class="line">        &lt;td&gt;用户名&lt;/td&gt;</div><div class="line">        &lt;td&gt;&lt;input type=&quot;text&quot; ng-model=&quot;user.name&quot;/&gt;&lt;/td&gt;</div><div class="line">    &lt;/tr&gt;</div><div class="line">    &lt;tr&gt;</div><div class="line">        &lt;td&gt;密码&lt;/td&gt;</div><div class="line">        &lt;td&gt;&lt;input type=&quot;password&quot; ng-model=&quot;user.password&quot;/&gt;&lt;/td&gt;</div><div class="line">    &lt;/tr&gt;</div><div class="line">    &lt;tr&gt;</div><div class="line">        &lt;td&gt;&lt;/td&gt;</div><div class="line">        &lt;td&gt;&lt;input type=&quot;button&quot; value=&quot;登陆&quot; ng-click=&quot;show()&quot;/&gt;&lt;/td&gt;</div><div class="line">    &lt;/tr&gt;</div><div class="line">    &lt;tr&gt;</div><div class="line">        &lt;td&gt;&lt;/td&gt;</div><div class="line">        &lt;td&gt;&#123;&#123;message&#125;&#125;&lt;/td&gt;</div><div class="line">    &lt;/tr&gt;</div><div class="line">&lt;/table&gt;</div></pre></td></tr></table></figure></p>
+<p><strong>js代码</strong>（我理解为控制器）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">var myApp=angular.module(&apos;myModule&apos;,[]);</div><div class="line">    myApp.controller(&apos;myController&apos;,[&apos;$scope&apos;, function ($scope) &#123;</div><div class="line">        //初始化，暴露数据</div><div class="line">        $scope.user=&#123;</div><div class="line">          user.name=&apos;&apos;,</div><div class="line">          user.password=&apos;&apos;</div><div class="line">          &#125;;</div><div class="line">        $scope.message=&apos;请输入用户名&apos;;</div><div class="line">        </div><div class="line">        //暴露行为</div><div class="line">        $scope.show= function () &#123;</div><div class="line">            console.log($scope.user);</div><div class="line">        &#125;;</div><div class="line">        </div><div class="line">        $scope.$watch(&apos;user.name&apos;, function (newVal,oldVal) &#123;</div><div class="line">                    if(newVal)&#123;</div><div class="line">                        if(newVal.length&lt;=6)&#123;</div><div class="line">                            $scope.message=&apos;用户名太短&apos;;</div><div class="line">                        &#125;else&#123;</div><div class="line">                            $scope.message=&apos;&apos;;</div><div class="line">                        &#125;</div><div class="line">                    &#125;else&#123;</div><div class="line">                        $scope.message=&apos;请输入用户名&apos;;</div><div class="line">                    &#125;</div><div class="line">                &#125;);</div><div class="line">    &#125;]);</div></pre></td></tr></table></figure>
+<p>在这里可以我把$scope理解为我们的数据模型Model,我们通过控制器初始化<code>$scope</code>数据模型，并且呈现给视图，官方提供了<code>$scope.$watch()</code>的方法用于监视模型的变化。</p>
+<h3 id="Angular指令"><a href="#Angular指令" class="headerlink" title="Angular指令"></a>Angular指令</h3><ul>
+<li>ng-app   ng-app 指令初始化一个 AngularJS 应用程序,该指令告诉 AngularJS，<div> 元素是 AngularJS 应用程序 的”所有者”</div></li>
+<li>ng-model   ng-model 指令用于绑定应用程序数据到 HTML 控制器(input, select, textarea)的值。或者理解为可以将输入域的值与 AngularJS 创建的变量绑定</li>
+</ul>
+<p>（未完待续。。。）</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/10/25/html5新增内容/" itemprop="url">
                   html5新增内容（一）
                 </a>
@@ -884,7 +1033,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-count">5</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -901,7 +1050,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
