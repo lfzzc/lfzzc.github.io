@@ -259,6 +259,138 @@
             
               
                 
+                <a class="post-title-link" href="/2016/11/04/前端工具02/" itemprop="url">
+                  '前端工具02'
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-11-04T11:43:05+08:00" content="2016-11-04">
+              2016-11-04
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/11/04/前端工具02/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/11/04/前端工具02/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="复习"><a href="#复习" class="headerlink" title="复习:"></a>复习:</h1><pre><code>npm node应用程序依赖项管理工具,即包管理工具
+bower 和npm类似,都是包管理工具,但是bower下载包时会优先查看缓存,并且与官网比较,下载需要的更新
+</code></pre><h1 id="gulp"><a href="#gulp" class="headerlink" title="gulp :"></a>gulp :</h1><pre><code>自动化工具
+</code></pre><h2 id="gulp工作流"><a href="#gulp工作流" class="headerlink" title="gulp工作流:"></a>gulp工作流:</h2><pre><code>1. 新建项目  
+2. 初始化环境, npm init
+3. 安装gulp npm install gulp --save-dev,安装bootstrap npm install bootstrap --save
+4. 新建gulpfile.js:gulp是通过gulpfile.js来实现前端自动化的
+5. 它可以做4件事情: 
+    - less编译,压缩,合并  
+    - js压缩,合并,混淆
+    - html压缩
+    - image复制
+6. 常用插件:gulp-less gulp-cssnano gulp-uglify gulp-concat gulp-htmlmin browser-sync
+</code></pre><h1 id="git"><a href="#git" class="headerlink" title="git:"></a>git:</h1><ul>
+<li>源代码管理工具,即版本管理工具</li>
+</ul>
+<h2 id="命令"><a href="#命令" class="headerlink" title="命令:"></a>命令:</h2><ul>
+<li>git init  :初始化环境,创建一个仓库,在新项目中使用该命令,目录中会多出一个.git文件,用于记录每次的修改,在项目根目录下新建一个.gitignore文件放入不需要被记录的文件,例如*.idea,node_modules,这写文件只在开发阶段使用所以不需要被记录,在.gitignore中的文件将不会出现在 git status中</li>
+<li>git add   :把一个文件加入暂存区  git add .==git add –all 把所有文件加入暂存区(除过.ignore中的)</li>
+<li>git commit -m ‘hello’ :提交暂存区到仓库区</li>
+<li>git branch v1:新建一个v1分支</li>
+<li>git checkout v1; 切换到v1分支</li>
+<li>git status 显示有变更的文件</li>
+<li>git log: 显示当前分支的版本历史</li>
+<li>git fetch [remote] 下载远程仓库的所有变动</li>
+<li>git push origin -u v1 把分之一推送到远程仓库</li>
+<li>git pull origin master 把master分支从远程仓库拉过来</li>
+<li>git reset –hard  d25635  回退版本</li>
+</ul>
+<h1 id="github"><a href="#github" class="headerlink" title="github:"></a>github:</h1><ul>
+<li>git的一个提供商<br>git托管页面:git checkout -b gh-pages  新建一个gh-pages页面并切换到该分支,然后推送到远程仓库<br>页面访问地址:https:lfzzczzy/github.io/项目名称</li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/11/04/前端工具01/" itemprop="url">
                   '前端工具01'
                 </a>
@@ -1168,7 +1300,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">6</span>
+              <span class="site-state-item-count">7</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -1185,7 +1317,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
