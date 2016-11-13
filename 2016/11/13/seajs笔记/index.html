@@ -1,0 +1,726 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.2" />
+
+
+
+
+
+
+<meta name="description" content="模块化开发概述什么是模块化开发
+将软件产品看作为一系列功能模块的组合
+通过特定的方式实现软件所需模块的划分、管理、加载
+
+为什么使用模块化开发
+https://github.com/seajs/seajs/issues/547
+协同
+代码复用
+解决问题
+大量的文件引入
+命名冲突
+文件依赖
+存在
+顺序
+
+
+
+
+
+实现模块化的推演step-01 全局函数step-02 封装对象step-03 划分私有">
+<meta property="og:type" content="article">
+<meta property="og:title" content="'seajs笔记'">
+<meta property="og:url" content="http://yoursite.com/2016/11/13/seajs笔记/index.html">
+<meta property="og:site_name" content="zhangzc">
+<meta property="og:description" content="模块化开发概述什么是模块化开发
+将软件产品看作为一系列功能模块的组合
+通过特定的方式实现软件所需模块的划分、管理、加载
+
+为什么使用模块化开发
+https://github.com/seajs/seajs/issues/547
+协同
+代码复用
+解决问题
+大量的文件引入
+命名冲突
+文件依赖
+存在
+顺序
+
+
+
+
+
+实现模块化的推演step-01 全局函数step-02 封装对象step-03 划分私有">
+<meta property="og:updated_time" content="2016-11-13T06:17:20.551Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="'seajs笔记'">
+<meta name="twitter:description" content="模块化开发概述什么是模块化开发
+将软件产品看作为一系列功能模块的组合
+通过特定的方式实现软件所需模块的划分、管理、加载
+
+为什么使用模块化开发
+https://github.com/seajs/seajs/issues/547
+协同
+代码复用
+解决问题
+大量的文件引入
+命名冲突
+文件依赖
+存在
+顺序
+
+
+
+
+
+实现模块化的推演step-01 全局函数step-02 封装对象step-03 划分私有">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2016/11/13/seajs笔记/"/>
+
+
+  <title> 'seajs笔记' | zhangzc </title>
+</head>
+
+<body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">zhangzc</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            公益404
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                'seajs笔记'
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-11-13T14:16:23+08:00" content="2016-11-13">
+              2016-11-13
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/11/13/seajs笔记/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/11/13/seajs笔记/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="模块化开发"><a href="#模块化开发" class="headerlink" title="模块化开发"></a>模块化开发</h1><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><h3 id="什么是模块化开发"><a href="#什么是模块化开发" class="headerlink" title="什么是模块化开发"></a>什么是模块化开发</h3><ul>
+<li>将软件产品看作为一系列功能模块的组合</li>
+<li>通过特定的方式实现软件所需模块的划分、管理、加载</li>
+</ul>
+<h3 id="为什么使用模块化开发"><a href="#为什么使用模块化开发" class="headerlink" title="为什么使用模块化开发"></a>为什么使用模块化开发</h3><ul>
+<li><a href="https://github.com/seajs/seajs/issues/547" target="_blank" rel="external">https://github.com/seajs/seajs/issues/547</a></li>
+<li>协同</li>
+<li>代码复用</li>
+<li>解决问题<ul>
+<li>大量的文件引入</li>
+<li>命名冲突</li>
+<li>文件依赖<ul>
+<li>存在</li>
+<li>顺序</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="实现模块化的推演"><a href="#实现模块化的推演" class="headerlink" title="实现模块化的推演"></a>实现模块化的推演</h3><h4 id="step-01-全局函数"><a href="#step-01-全局函数" class="headerlink" title="step-01 全局函数"></a>step-01 全局函数</h4><h4 id="step-02-封装对象"><a href="#step-02-封装对象" class="headerlink" title="step-02 封装对象"></a>step-02 封装对象</h4><h4 id="step-03-划分私有空间"><a href="#step-03-划分私有空间" class="headerlink" title="step-03 划分私有空间"></a>step-03 划分私有空间</h4><h4 id="step-04-模块的扩展与维护"><a href="#step-04-模块的扩展与维护" class="headerlink" title="step-04 模块的扩展与维护"></a>step-04 模块的扩展与维护</h4><h4 id="step-05-第三方依赖管理"><a href="#step-05-第三方依赖管理" class="headerlink" title="step-05 第三方依赖管理"></a>step-05 第三方依赖管理</h4><p>在什么场景下使用模块化开发<br>  业务复杂<br>  重用逻辑非常多<br>  扩展性要求较高</p>
+<hr>
+<h2 id="实现规范"><a href="#实现规范" class="headerlink" title="实现规范"></a>实现规范</h2><h3 id="CommonJS规范"><a href="#CommonJS规范" class="headerlink" title="CommonJS规范"></a>CommonJS规范</h3><h3 id="AMD规范"><a href="#AMD规范" class="headerlink" title="AMD规范"></a>AMD规范</h3><h3 id="CMD规范"><a href="#CMD规范" class="headerlink" title="CMD规范"></a>CMD规范</h3><hr>
+<h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><h2 id="seajs使用"><a href="#seajs使用" class="headerlink" title="seajs使用"></a>seajs使用</h2><ol>
+<li>再页面中引入sea.js</li>
+<li>创建一个主模块文件，如main.js</li>
+<li>在主模块内通过define(require,exports,module)的形式创建一个模块;</li>
+<li>在页面中通过seajs.use(‘path’,fn)的方式使用模块;</li>
+<li>回调函数的参数穿过来的就是模块中导出的成员对象</li>
+</ol>
+<h4 id="定义一个模块"><a href="#定义一个模块" class="headerlink" title="定义一个模块"></a>定义一个模块</h4><ul>
+<li>define<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">define(function(require,exports,module)&#123;</div><div class="line">  export.add=function(a,b)&#123;</div><div class="line">      return a+b;</div><div class="line">    &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="使用一个模块"><a href="#使用一个模块" class="headerlink" title="使用一个模块"></a>使用一个模块</h4><ul>
+<li>seajs.use();<ul>
+<li>一般用于入口模块</li>
+<li>一般只会使用一次</li>
+</ul>
+</li>
+<li>require<ul>
+<li>用于模块和模块之间</li>
+</ul>
+</li>
+</ul>
+<h4 id="导出一个成员的方式"><a href="#导出一个成员的方式" class="headerlink" title="导出一个成员的方式"></a>导出一个成员的方式</h4><ul>
+<li>module.exports(常用)</li>
+<li>exports.xxx;</li>
+<li>return </li>
+<li>三种方式的优先级：return&gt;module.exports&gt;exports<h4 id="异步加载模块"><a href="#异步加载模块" class="headerlink" title="异步加载模块"></a>异步加载模块</h4></li>
+<li><p>require.async();</p>
+<p><code>require.async(&#39;path&#39;,function(module){
+})</code>  </p>
+<h4 id="使用第三方依赖（jQuery）"><a href="#使用第三方依赖（jQuery）" class="headerlink" title="使用第三方依赖（jQuery）"></a>使用第三方依赖（jQuery）</h4></li>
+</ul>
+<ul>
+<li>由于CMD是国产货，jquery默认不支持</li>
+<li>改造方法：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">// 适配CMD</div><div class="line">if (typeof define === &quot;function&quot; &amp;&amp; !define.amd) &#123;</div><div class="line">  // 当前有define函数，并且不是AMD的情况</div><div class="line">  // jquery在新版本中如果使用AMD或CMD方式，不会去往全局挂载jquery对象</div><div class="line">  define(function() &#123;</div><div class="line">    return jQuery.noConflict(true);</div><div class="line">  &#125;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/11/04/前端工具02/" rel="next" title="'前端工具02'">
+                <i class="fa fa-chevron-left"></i> '前端工具02'
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/11/13/seajs笔记/"
+           data-title="'seajs笔记'" data-url="http://yoursite.com/2016/11/13/seajs笔记/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="zhangzc" />
+          <p class="site-author-name" itemprop="name">zhangzc</p>
+          <p class="site-description motion-element" itemprop="description">人生没有战败，只有战死！</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">8</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#模块化开发"><span class="nav-number">1.</span> <span class="nav-text">模块化开发</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#概述"><span class="nav-number">1.1.</span> <span class="nav-text">概述</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是模块化开发"><span class="nav-number">1.1.1.</span> <span class="nav-text">什么是模块化开发</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#为什么使用模块化开发"><span class="nav-number">1.1.2.</span> <span class="nav-text">为什么使用模块化开发</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实现模块化的推演"><span class="nav-number">1.1.3.</span> <span class="nav-text">实现模块化的推演</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#step-01-全局函数"><span class="nav-number">1.1.3.1.</span> <span class="nav-text">step-01 全局函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#step-02-封装对象"><span class="nav-number">1.1.3.2.</span> <span class="nav-text">step-02 封装对象</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#step-03-划分私有空间"><span class="nav-number">1.1.3.3.</span> <span class="nav-text">step-03 划分私有空间</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#step-04-模块的扩展与维护"><span class="nav-number">1.1.3.4.</span> <span class="nav-text">step-04 模块的扩展与维护</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#step-05-第三方依赖管理"><span class="nav-number">1.1.3.5.</span> <span class="nav-text">step-05 第三方依赖管理</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实现规范"><span class="nav-number">1.2.</span> <span class="nav-text">实现规范</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#CommonJS规范"><span class="nav-number">1.2.1.</span> <span class="nav-text">CommonJS规范</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AMD规范"><span class="nav-number">1.2.2.</span> <span class="nav-text">AMD规范</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CMD规范"><span class="nav-number">1.2.3.</span> <span class="nav-text">CMD规范</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实现"><span class="nav-number">1.3.</span> <span class="nav-text">实现</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#seajs使用"><span class="nav-number">1.4.</span> <span class="nav-text">seajs使用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#定义一个模块"><span class="nav-number">1.4.0.1.</span> <span class="nav-text">定义一个模块</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用一个模块"><span class="nav-number">1.4.0.2.</span> <span class="nav-text">使用一个模块</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#导出一个成员的方式"><span class="nav-number">1.4.0.3.</span> <span class="nav-text">导出一个成员的方式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#异步加载模块"><span class="nav-number">1.4.0.4.</span> <span class="nav-text">异步加载模块</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用第三方依赖（jQuery）"><span class="nav-number">1.4.0.5.</span> <span class="nav-text">使用第三方依赖（jQuery）</span></a></li></ol></li></ol></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">zhangzc</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"lfzhangzc"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    <script src="/vendors/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+
+</body>
+</html>
