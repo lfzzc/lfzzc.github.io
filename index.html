@@ -259,6 +259,143 @@
             
               
                 
+                <a class="post-title-link" href="/2016/12/04/Nodejs深入浅出（一）/" itemprop="url">
+                  Nodejs深入浅出（一）
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-12-04T15:55:11+08:00" content="2016-12-04">
+              2016-12-04
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/12/04/Nodejs深入浅出（一）/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/04/Nodejs深入浅出（一）/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Node-js"><a href="#Node-js" class="headerlink" title="Node.js"></a>Node.js</h1><h2 id="Node-js概述"><a href="#Node-js概述" class="headerlink" title="Node.js概述"></a>Node.js概述</h2><ul>
+<li>Node.js是基于V8引擎的js运行环境，使用了事件驱动、非阻塞I/O模型，使其轻量又高效。</li>
+<li>node是一个javaScript的运行环境（平台），所谓运行环境，是指js通过node在服务器端运行，node就像是javascript虚拟机，node不是一门语言，也不是一个框架。</li>
+<li>语言的能力取决于平台，并不取决于语言本身，语言本身只提供定义变量，定义函数，定义类型，流程控制，循环结构之类的操作</li>
+<li>对于js来说，我们常说的js是Es，大部分能力是浏览器的执行引擎决定的，例如，BOM和DOM是可以说是浏览器为我们开放出来的接口，Cordova中提供js调用摄像头，操作本地API。<h2 id="Node的实现"><a href="#Node的实现" class="headerlink" title="Node的实现"></a>Node的实现</h2></li>
+<li>Node 内部采用 Google Chrome 的 V8 引擎，作为 JavaScript 语言解释器；</li>
+<li>通过自行开发的 libuv 库，调用操作系统资源。<h2 id="Node安装"><a href="#Node安装" class="headerlink" title="Node安装"></a>Node安装</h2><h3 id="nvm安装"><a href="#nvm安装" class="headerlink" title="nvm安装"></a>nvm安装</h3></li>
+</ul>
+<ol>
+<li>下载nvm，解压到全英文路径</li>
+<li>编辑<code>setting.txt</code>（若没有则新建），<ul>
+<li>root配置为当前<code>nvm.exe</code>所在目录</li>
+<li>path配置为<code>node</code>快捷方式所在目录</li>
+<li>arch为当前操作系统位数64/32</li>
+<li>proxy不用配置</li>
+</ul>
+</li>
+<li>配置环境变量(用户)<ul>
+<li>NVM_HOME=当前<code>nvm.exe</code>所在目录</li>
+<li>NVM_SYMLINK=<code>node</code>快捷方式所在目录</li>
+<li>PATH+=%NVM_HOME%;%NVM_SYMLINK%;</li>
+<li>打开CMD，通过set命令查看环境变量是否配置成功，<code>set NVM_HOME</code>,<code>set NVM_SYMLINK</code>,<code>set PATH</code></li>
+</ul>
+</li>
+<li>npm的目录之后再配置<h3 id="windows常用命令行操作"><a href="#windows常用命令行操作" class="headerlink" title="windows常用命令行操作"></a>windows常用命令行操作</h3></li>
+</ol>
+<ul>
+<li><code>cd</code> <code>mkdir</code> <code>dir</code>(<code>ls</code>) <code>cls</code>(<code>clear</code>) <code>del</code>(<code>rm</code>) 括号中的必须在新版PowerShell中使用。<h3 id="Node-REPL环境"><a href="#Node-REPL环境" class="headerlink" title="Node REPL环境"></a>Node REPL环境</h3></li>
+<li>全称：read eval print loop</li>
+<li>接受用户输入——&gt;执行用户输入——&gt;打印执行结果到控制台——&gt;循环到下一次</li>
+<li>在cmd中输入<code>node</code>即可进入REPL环境，相当于chrome中的<code>console</code>环境。</li>
+<li>特殊变量下划线（_）表示上一个变量的返回结果</li>
+<li>通过.exit调用<code>process.exit()</code>退出REPL<h3 id="Node全局对象"><a href="#Node全局对象" class="headerlink" title="Node全局对象"></a>Node全局对象</h3></li>
+<li>global：<br>类似于客户端 JavaScript 运行环境中的 window</li>
+<li>process：<br>用于获取当前的 Node 进程信息，一般用于获取环境变量之类的信息</li>
+<li>console：<br>Node 中内置的 console 模块，提供操作控制台的输入输出功能，常见使用方式与客户端类似</li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/11/16/ng笔记/" itemprop="url">
                   未命名
                 </a>
@@ -1568,7 +1705,7 @@ bower 和npm类似,都是包管理工具,但是bower下载包时会优先查看�
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">9</span>
+              <span class="site-state-item-count">10</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
