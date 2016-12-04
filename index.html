@@ -259,6 +259,116 @@
             
               
                 
+                <a class="post-title-link" href="/2016/11/16/ng笔记/" itemprop="url">
+                  未命名
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-11-16T09:22:46+08:00" content="2016-11-16">
+              2016-11-16
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/11/16/ng笔记/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/11/16/ng笔记/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">$routeProvider</div><div class="line">				.when(&apos;/:status&apos;,&#123;</div><div class="line">				templateUrl:&apos;tudo_temp&apos;,</div><div class="line">				controller:&apos;myController&apos;</div><div class="line">			&#125;)</div><div class="line">				.otherwise(&#123;redirectTo:&apos;/all&apos;&#125;)</div></pre></td></tr></table></figure>
+<ul>
+<li>不论是when还是otherwise都必须配有模板和控制器,否则不会在页面生成视图,上例中若没有不满足<code>&#39;/:status?&#39;</code>,则会执行otherwise语句,让当前地址指向<code>/all</code>;</li>
+<li><p>模板使用`<div ng-view=""></div></p>
+<pre><code>&lt;script id=&quot;tudo_temp&quot; type=&quot;text/ng-template&quot;&gt;...&lt;/script&gt;`
+</code></pre></li>
+<li><p>路由指向   <code>controller:&#39;myController&#39;</code>            那么我们就把原来控myController控制的区域包在script标签内;</p>
+</li>
+<li>controller.js和services.js原本是在app.js中,知识后来我们把他们独立出来成为模块,因此我们在app中引入ngRoute模块时,在controller.js中直接注入$route模块即可</li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/11/13/seajs笔记/" itemprop="url">
                   'seajs笔记'
                 </a>
@@ -1458,7 +1568,7 @@ bower 和npm类似,都是包管理工具,但是bower下载包时会优先查看�
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">8</span>
+              <span class="site-state-item-count">9</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

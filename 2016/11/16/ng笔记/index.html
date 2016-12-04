@@ -84,16 +84,16 @@
 
 
 
-<meta name="description" content="人生没有战败，只有战死！">
-<meta property="og:type" content="website">
-<meta property="og:title" content="categories">
-<meta property="og:url" content="http://yoursite.com/categories/index.html">
+<meta name="description" content="123456$routeProvider				.when(&amp;apos;/:status&amp;apos;,&amp;#123;				templateUrl:&amp;apos;tudo_temp&amp;apos;,				controller:&amp;apos;myController&amp;apos;			&amp;#125;)				.otherwise(&amp;#123;redirectTo:&amp;apos;/all&amp;apos;&amp;#125;)">
+<meta property="og:type" content="article">
+<meta property="og:title" content="zhangzc">
+<meta property="og:url" content="http://yoursite.com/2016/11/16/ng笔记/index.html">
 <meta property="og:site_name" content="zhangzc">
-<meta property="og:description" content="人生没有战败，只有战死！">
-<meta property="og:updated_time" content="2016-10-24T02:27:05.931Z">
+<meta property="og:description" content="123456$routeProvider				.when(&amp;apos;/:status&amp;apos;,&amp;#123;				templateUrl:&amp;apos;tudo_temp&amp;apos;,				controller:&amp;apos;myController&amp;apos;			&amp;#125;)				.otherwise(&amp;#123;redirectTo:&amp;apos;/all&amp;apos;&amp;#125;)">
+<meta property="og:updated_time" content="2016-11-16T01:22:31.456Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="categories">
-<meta name="twitter:description" content="人生没有战败，只有战死！">
+<meta name="twitter:title" content="zhangzc">
+<meta name="twitter:description" content="123456$routeProvider				.when(&amp;apos;/:status&amp;apos;,&amp;#123;				templateUrl:&amp;apos;tudo_temp&amp;apos;,				controller:&amp;apos;myController&amp;apos;			&amp;#125;)				.otherwise(&amp;#123;redirectTo:&amp;apos;/all&amp;apos;&amp;#125;)">
 
 
 
@@ -114,16 +114,10 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/categories/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/11/16/ng笔记/"/>
 
 
-  <title>
-  
-
-  
-    categories | zhangzc
-  
-</title>
+  <title>  | zhangzc </title>
 </head>
 
 <body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
@@ -144,7 +138,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
@@ -244,9 +238,129 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
     
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-11-16T09:22:46+08:00" content="2016-11-16">
+              2016-11-16
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/11/16/ng笔记/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/11/16/ng笔记/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
       
-    
+      
+
+      
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">$routeProvider</div><div class="line">				.when(&apos;/:status&apos;,&#123;</div><div class="line">				templateUrl:&apos;tudo_temp&apos;,</div><div class="line">				controller:&apos;myController&apos;</div><div class="line">			&#125;)</div><div class="line">				.otherwise(&#123;redirectTo:&apos;/all&apos;&#125;)</div></pre></td></tr></table></figure>
+<ul>
+<li>不论是when还是otherwise都必须配有模板和控制器,否则不会在页面生成视图,上例中若没有不满足<code>&#39;/:status?&#39;</code>,则会执行otherwise语句,让当前地址指向<code>/all</code>;</li>
+<li><p>模板使用`<div ng-view=""></div></p>
+<pre><code>&lt;script id=&quot;tudo_temp&quot; type=&quot;text/ng-template&quot;&gt;...&lt;/script&gt;`
+</code></pre></li>
+<li><p>路由指向   <code>controller:&#39;myController&#39;</code>            那么我们就把原来控myController控制的区域包在script标签内;</p>
+</li>
+<li>controller.js和services.js原本是在app.js中,知识后来我们把他们独立出来成为模块,因此我们在app中引入ngRoute模块时,在controller.js中直接注入$route模块即可</li>
+</ul>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/11/13/seajs笔记/" rel="next" title="'seajs笔记'">
+                <i class="fa fa-chevron-left"></i> 'seajs笔记'
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -257,8 +371,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="categories/index.html"
-           data-title="categories" data-url="http://yoursite.com/categories/index.html">
+      <div class="ds-thread" data-thread-key="2016/11/16/ng笔记/"
+           data-title="" data-url="http://yoursite.com/2016/11/16/ng笔记/">
       </div>
     
   </div>
@@ -282,8 +396,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -333,6 +456,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -429,6 +563,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
+
 
   
 
